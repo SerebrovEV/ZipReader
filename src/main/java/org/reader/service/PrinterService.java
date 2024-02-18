@@ -3,8 +3,11 @@ package org.reader.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -12,8 +15,12 @@ public class PrinterService {
 
     private final ReaderService readerService;
 
-    public void printFileName() {
-
+    public void printFileName() throws IOException {
+        List<String> files = new ArrayList<>();
+        readerService.readFile(files);
+        for (String str : files) {
+            System.out.println(str);
+        }
     }
 
     public void printTime() throws InterruptedException {

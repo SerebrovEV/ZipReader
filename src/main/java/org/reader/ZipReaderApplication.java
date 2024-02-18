@@ -6,12 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.util.StringUtils;
 
-
-@Configuration
-@SpringBootApplication
 @Slf4j
+@SpringBootApplication
 public class ZipReaderApplication {
 
     public static void main(String[] args) {
