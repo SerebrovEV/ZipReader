@@ -17,6 +17,7 @@ public class ZipApplicationService {
 
         try {
             printerService.printFileName();
+
             printerService.printTime();
         } catch (InterruptedException | IOException e) {
             log.warn(e.getMessage());
